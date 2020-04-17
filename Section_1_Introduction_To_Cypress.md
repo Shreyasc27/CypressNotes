@@ -2,16 +2,16 @@
 
 ### What is Cypress? And why is it the future of the Automation
 
-1. Automatically waits for 4 secs
+1. Automatically waits for `4 secs`
 2. Waits for the aut to come into desired state
 3. Notified when the Page loads or unloads
 4. If the element is hidden under another element, Cypress forces the hiding element to showcase the hidden element and then performs the action
-5. Helps mocking server reponses or network responses. Mocks the response from the apis.
-6. Can alternate requests and responses
+5. Helps `mocking server reponses or network responses`. Mocks the response from the apis.
+6. Can alter requests and responses
 7. Takes snapshots when the tests runs
 8. Videos of entire test execution can be viewed
 9. Built on `Node.js` and packaged as `npm`
-10. Cypress is bundled with jQuery
+10. Cypress is `bundled with jQuery`
 
 ### Understand Cypress Architecture and Benefits
 
