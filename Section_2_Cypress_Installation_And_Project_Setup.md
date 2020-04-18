@@ -6,8 +6,8 @@
 2. `npm install` reads `package.json` and performs downloads
 3. `npm install cypress --save-dev` - will look for cypress in the npm repository. `--save-dev` will add the entry to `package.json` for future reference.
 4. Two ways to run tests -
-    * a. Command line
-    * b. Test runner
+    * Command line
+    * Test runner
 5. `npm install cypress --save-dev` adds below to the `package.json`
 ```
 "devDependencies": {
