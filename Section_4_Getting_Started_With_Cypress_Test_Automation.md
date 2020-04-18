@@ -34,4 +34,4 @@ describe('First Test Suite', () => {
 
 1. Cypress allows `Time Travel` by clicking on each of the executed steps in `Test Runner`
 2. User can go to history and check what was the execution status at that point in time
-3. `cy.get(".product:visible").should("have.length", 4)` - ':visible' maes sure that only visible elements are considered   
+3. `cy.get(".product:visible").should("have.length", 4)` - ':visible' maes sure that only visible elements are considered

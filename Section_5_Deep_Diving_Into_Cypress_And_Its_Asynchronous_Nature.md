@@ -44,5 +44,23 @@ cy.get(".products").find(".product").each(($el, index, $list) => {
 
 ### 20. Understanding the Difference Between JQuery Method And Cypress Commands
 
+1. This will not work. Because as per the logic of `Promise`, we are voilating the implementation provided by Cypress
+```
+const logo = cy.get(".brand")
+cy.log(logo.text())
+```
+2. To make the above code snippet work, we will have to explicitly resolve promise
+```
+cy.get(".brand").then(function(logo)
+{
+    cy.log(logo.text())
+})
+```
+3. `cy.log` is used for printing logs
+4. `cy.get(".search-keyword").type("ca")` - In case of Cypress Commands, when we call 2 Cypress commands back to back; `Cypress will resolve 1st commands promise, wait for it and then resolve 2nd`.
+5. Cypress supports `JQuery`. `.text()` is a JQuery method.
+6. `cy.get(".brand").text()` - `.text()` method returns the content of the selected element.
+7. `Non Cypress commands do not resolve Promise by themselves. We have to manually resolve them using then()`
+
 ### 21. Handling ASync Promise With Cypress
 
