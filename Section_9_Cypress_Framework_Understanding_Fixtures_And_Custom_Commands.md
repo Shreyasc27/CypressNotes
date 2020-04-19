@@ -108,6 +108,7 @@ describe('Angular Practice Test Suite', () => {
 
 1. `Custom methods` should be present in `support` folder
 
+```
 /// <reference types="Cypress" />
 
 describe('Angular Practice Test Suite', () => {
