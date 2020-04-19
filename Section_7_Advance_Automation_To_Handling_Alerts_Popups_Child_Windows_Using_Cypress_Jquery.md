@@ -39,8 +39,36 @@ cy.wait(2000)
 cy.go("forward")
 ```
 
-
 ### 32. Handling Web Tables With Cypress Using Each Command
+
+1. `tr td:nth-child(2)` - To get the contents of the 2nd column
+```
+describe('First Test Suite', () => {
+    
+    it('First Test', () => {
+
+        cy.visit("https://rahulshettyacademy.com/AutomationPractice");
+        
+        cy.get("tr td:nth-child(2)").each(($el, index, $list) => {
+            
+            const courseName = $el.text()
+        
+            if (courseName === "Master Selenium Automation in simple Python Language") {
+              
+                const coursePrice = cy.get('tr td:nth-child(2)').eq(index).next().then(function(price){
+
+                    expect(price.text()).to.equal("25")
+                
+                })
+            
+            }
+
+          })
+
+    })
+  
+})
+```
 
 
 ### 34. Handling Mouse Over PopUps Using Cypress
