@@ -72,3 +72,18 @@ describe('First Test Suite', () => {
 
 
 ### 34. Handling Mouse Over PopUps Using Cypress
+1. `.invoke("show")` - Does `mouse hover by invoking jQuery show` and clicks on the `Top`
+```
+it.only('Second Test', () => {
+
+    cy.visit("https://rahulshettyacademy.com/AutomationPractice");
+    cy.get(".mouse-hover-content").invoke("show")
+    cy.contains("Top").click()
+    cy.url().should("includes","top")
+    
+})
+```
+2. Cypress can click on the hidden element as well. `{force:true}` make sure that hidden elements are also displayed
+```
+cy.contains("Top").click({force:true})
+```
