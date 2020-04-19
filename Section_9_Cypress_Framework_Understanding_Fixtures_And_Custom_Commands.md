@@ -103,3 +103,40 @@ describe('Angular Practice Test Suite', () => {
 })
 
 ```
+
+`Custom Commands`
+
+1. `Custom methods` should be present in `support` folder
+
+/// <reference types="Cypress" />
+
+describe('Angular Practice Test Suite', () => {
+    
+    it.only('Third Test', function() {
+
+        cy.visit("https://rahulshettyacademy.com/angularpractice/shop")
+        cy.wait(2000)
+        cy.selectProduct("Nokia Edge")
+        
+    })
+  
+})
+```
+`Support > Command.js`
+```
+Cypress.Commands.add("selectProduct", (productName) => { 
+    cy.get('h4.card-title').each(($el, index, $list) => {
+            
+        const phoneName = $el.text()
+        cy.log(phoneName)
+
+        if (phoneName.match(productName)) {
+          
+            cy.log("Inside Custom Command")
+            cy.get('button.btn.btn-info').eq(index).click()
+        
+        }
+
+      })
+})
+```
