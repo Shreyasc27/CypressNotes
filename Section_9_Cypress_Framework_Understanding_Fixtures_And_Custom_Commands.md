@@ -59,7 +59,9 @@ describe('Angular Practice Test Suite', () => {
 ```
 
 > For all `Behaviours` use `be.`
+
 > For `Retriving Property` use `should('have.value','')`
+
 > Question yourself if it is a `Behaviour` or `Property`
 
 ```
