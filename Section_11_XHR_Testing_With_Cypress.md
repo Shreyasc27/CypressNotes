@@ -1,4 +1,4 @@
-# Section 14: XHR testing with Cypress
+# Section 11: XHR testing with Cypress
 
 ### 62. Introduction to XHR testing and how it helps in writing edge test cases
 
